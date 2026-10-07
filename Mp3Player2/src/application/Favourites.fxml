@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="application.FavouritesController" styleClass="favourites-pane">
+
+    <Label text="Αγαπημένα Τραγούδια" styleClass="favourites-header"/>
+    <ListView fx:id="favoritesList" prefWidth="250" prefHeight="200" styleClass="song-list"/>
+
+</VBox>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ListView?>
+
+
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" styleClass="root-pane" stylesheets="@style.css" 
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="application.SampleController" 
+            prefWidth="600" maxWidth="600" prefHeight="550" minHeight="550" style="-fx-alignment: center;"> 
+    
+    <VBox alignment="CENTER" layoutX="0" layoutY="0" prefHeight="550" prefWidth="600" maxWidth="600" spacing="15">
+        
+        <ListView fx:id="songList" maxHeight="200.0" prefHeight="200.0" prefWidth="580" styleClass="song-list"/>
+        
+        <Label fx:id="titleLabel" styleClass="title-label" text="MP3 PLAYER"/>
+
+        <HBox alignment="CENTER" spacing="10">
+            <Button fx:id="playButton" onAction="#playMedia" styleClass="pill-button" text="▶ PLAY" />
+            <Button fx:id="pauseButton" onAction="#pauseMedia" styleClass="pill-button" text="⏸ PAUSE" />
+            <Button fx:id="resetButton" onAction="#resetMedia" styleClass="pill-button" text="⟲ RESET" />
+            <Button fx:id="previousButton" onAction="#previousMedia" styleClass="pill-button" text="⏮ PREV" />
+            <Button fx:id="nextButton" onAction="#nextMedia" styleClass="pill-button" text="⏭ NEXT" />
+        </HBox>
+        
+        <HBox alignment="CENTER" spacing="15">
+        	<Button fx:id="addFavButton" text="⭐ Προσθήκη στα Αγαπημένα" onAction="#addToFavourites" styleClass="pill-button"/>
+        	<Button fx:id="removeFavButton" text="✖ Αφαίρεση" onAction="#removeFromFavourites" styleClass="pill-button"/>
+        	<Button fx:id="showFavButton" text="📁 Αγαπημένα" onAction="#openFavouritesWindow" styleClass="pill-button"/>
+    	</HBox>
+
+        <HBox alignment="CENTER" spacing="15">
+            <Label styleClass="text-label" text="Speed" />
+            <ComboBox fx:id="speedBox" onAction="#changeSpeed" styleClass="choice-box" />
+            <Slider fx:id="volumeSlider" prefWidth="150" styleClass="volume-slider" />
+        </HBox>
+       	
+        <ProgressBar fx:id="songProgressBar" prefWidth="400" progress="0" styleClass="progress-bar" />
+    </VBox>
+
+</AnchorPane>

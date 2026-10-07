@@ -1,0 +1,127 @@
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
+    -fx-padding: 20;
+}
+
+.title-label {
+    -fx-text-fill: #4fc3f7;
+    -fx-font-size: 36px;
+    -fx-font-family: "Segoe UI Light";
+    -fx-font-weight: bold;
+    /* αρχικό μικρό drop shadow — το animation θα αλλάζει τις παραμέτρους από Java */
+    -fx-effect: dropshadow(gaussian, rgba(79,195,247,0.5), 12, 0.3, 0, 0);
+    -fx-alignment: center;
+}
+
+.progress-bar {
+    -fx-pref-height: 10px;
+    -fx-background-radius: 10;
+    -fx-accent: #4fc3f7;
+    -fx-control-inner-background: #333;
+}
+
+.pill-button {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #4fc3f7;
+    -fx-background-radius: 30;
+    -fx-padding: 10 22;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI";
+    -fx-border-color: #4fc3f7;
+    -fx-border-radius: 30;
+    -fx-border-width: 1.5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(79,195,247,0.2), 10, 0.3, 0, 1);
+}
+
+.pill-button:hover {
+    -fx-background-color: #4fc3f7;
+    -fx-text-fill: #1a1a1a;
+    -fx-effect: dropshadow(gaussian, rgba(79,195,247,0.5), 20, 0.4, 0, 0);
+}
+
+.choice-box {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #4fc3f7;
+    -fx-background-radius: 20;
+}
+
+.volume-slider {
+    -fx-control-inner-background: #333;
+    -fx-accent: #4fc3f7;
+    -fx-background-radius: 20;
+}
+
+.text-label {
+    -fx-text-fill: #bbbbbb;
+    -fx-font-family: "Segoe UI";
+}
+.song-list {
+    /* Εξωτερικό Στυλ Λίστας */
+    -fx-background-color: #1a1a1a; /* Σκούρο φόντο */
+    -fx-background-radius: 15; /* Στρογγυλές γωνίες */
+    -fx-border-color: #4fc3f7; /* Φωτεινό περίγραμμα */
+    -fx-border-radius: 15;
+    -fx-border-width: 1.5;
+    -fx-padding: 5;
+    
+    /* Εφέ σκιάς (glow) όπως στα κουμπιά */
+    -fx-effect: dropshadow(gaussian, rgba(79,195,247,0.2), 10, 0.3, 0, 1);
+}
+
+.song-list .scroll-bar:vertical .track-background,
+.song-list .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent; /* Κάνουμε το track της μπάρας κύλισης διαφανές */
+}
+
+/* Στυλ για τα Κελιά (τραγούδια) */
+.song-list .list-cell {
+    -fx-background-color: transparent; /* Τα κελιά δεν έχουν δικό τους φόντο */
+    -fx-text-fill: #bbbbbb; /* Ανοιχτό γκρι κείμενο */
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 8 10;
+    -fx-cursor: hand;
+}
+
+/* Στυλ για το Κελί όταν επιλέγεται */
+.song-list .list-cell:filled:selected {
+    -fx-background-color: #4fc3f7; /* Το φόντο επιλογής γίνεται το χρώμα glow */
+    -fx-text-fill: #1a1a1a; /* Μαύρο κείμενο στην επιλογή */
+    -fx-background-radius: 8;
+}
+
+/* Στυλ για το Κελί όταν είναι σε κατάσταση hover */
+.song-list .list-cell:filled:hover {
+    -fx-background-color: rgba(79, 195, 247, 0.1); /* Λεπτό μπλε φόντο στο hover */
+    -fx-text-fill: #4fc3f7; /* Λεπτό μπλε χρώμα κειμένου στο hover */
+    -fx-background-radius: 8;
+}
+
+/* -------------------------------------------------------------------------- */
+/* FAVOURITES WINDOW STYLES                                                   */
+/* -------------------------------------------------------------------------- */
+
+/* Στυλ για το εξωτερικό VBox του Favourites.fxml */
+.favourites-pane {
+    -fx-background-color: #1a1a1a; /* Σκούρο φόντο */
+    -fx-border-color: #4fc3f7; /* Φωτεινό περίγραμμα */
+    -fx-border-width: 2.0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    
+    /* Ελαφριά σκιά/glow για να ξεχωρίζει το παράθυρο */
+    -fx-effect: dropshadow(gaussian, rgba(79,195,247,0.4), 15, 0.4, 0, 0);
+}
+
+/* Στυλ για την επικεφαλίδα "Αγαπημένα Τραγούδια" */
+.favourites-header {
+    -fx-text-fill: #4fc3f7;
+    -fx-font-size: 18px;
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 5 0; /* Κάτω padding */
+}
+
+/* Επαναχρησιμοποιούμε την κλάση .song-list (που δημιουργήθηκε προηγουμένως) 
+   για τη ListView των αγαπημένων. */

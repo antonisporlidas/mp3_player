@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" styleClass="root-pane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <VBox alignment="CENTER" layoutX="50.0" layoutY="30.0" prefHeight="250.0" prefWidth="300.0" spacing="20.0" styleClass="favourites-pane">
+      <padding>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+      <Label styleClass="favourites-header" text="Σύνδεση Player" />
+      
+      <TextField fx:id="usernameField" promptText="Όνομα Χρήστη" styleClass="choice-box" />
+      
+      <PasswordField fx:id="passwordField" promptText="Κωδικός" styleClass="choice-box" />
+      
+      <Button fx:id="loginButton" onAction="#handleLoginButton" styleClass="pill-button" text="ΣΥΝΔΕΣΗ" />
+      
+      <Label fx:id="errorLabel" styleClass="text-label" textFill="RED" />
+      
+   </VBox>
+</AnchorPane>
